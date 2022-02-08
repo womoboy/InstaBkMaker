@@ -7,4 +7,40 @@ body {
   margin: 0;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  flex-direction: column;
+  background: linear-gradient(70deg, black, teal);
+  min-height: 100vh;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  flex-direction: column;
+  background-color: whitesmoke;
+  padding: 1em;
+  border-radius: 1em;
+  box-shadow: 0 0 1em black;
+}
+
+form > div {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: fit-content;
+  margin: 10px 0;
+  gap: 10px;
+}
+
+#rigen {
+  font-size: 16px;
+  width: 50%;
+}
+
 /*# sourceMappingURL=general.css.map */

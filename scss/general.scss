@@ -1,1 +1,43 @@
 @import 'reset.scss';
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+// colors
+$whiteSmoke: whitesmoke;
+$black: black;
+$gray: gray;
+$white: white;
+
+body {
+    @include flex;
+    flex-direction: column;
+    background: linear-gradient(70deg, black, teal);
+    min-height: 100vh;
+}
+
+form {
+    @include flex;
+    flex-direction: column;
+    background-color: $whiteSmoke;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: 0 0 1em $black;
+}
+
+form > div {
+    @include flex;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+    margin: 10px 0;
+    gap: 10px;
+}
+
+#rigen {
+    font-size: 16px;
+    width: 50%;
+}
