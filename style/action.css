@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  font-family: vazir;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "MyWebFont";
+  src: url("../asset/fonts/Vazir-Regular-FD.eot");
+  /* IE9 Compat Modes */
+  src: url("../asset/fonts/Vazir-Regular-FD.eot?#iefix") format("embedded-opentype"), url("../asset/fonts/Vazir-Regular-FD.woff2") format("woff2"), url("../asset/fonts/Vazir-Regular-FD.woff") format("woff"), url("../asset/fonts/Vazir-Regular-FD.ttf") format("truetype"), url("../asset/fonts/Vazir-Regular-FD.svg") format("svg");
+  /* Legacy iOS */
+}
+
+/*# sourceMappingURL=action.css.map */

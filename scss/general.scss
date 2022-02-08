@@ -8,8 +8,6 @@
          url('../asset/fonts/Vazir-Regular-FD.svg') format('svg'); /* Legacy iOS */
 }
 
-@import 'reset.scss';
-
 @mixin flex {
     display: flex;
     justify-content: center;
@@ -23,70 +21,3 @@ $gray: gray;
 $white: white;
 $green: rgb(107, 223, 107);
 $orange: orange;
-
-body {
-    @include flex;
-    flex-direction: column;
-    background: linear-gradient(70deg, black, teal);
-    min-height: 100vh;
-}
-
-form {
-    @include flex;
-    flex-direction: column;
-    background-color: $whiteSmoke;
-    padding: 1em;
-    border-radius: 1em;
-    box-shadow: 0 0 1em $black;
-}
-
-form > div {
-    @include flex;
-    justify-content: space-between;
-    width: 100%;
-    height: fit-content;
-    margin: 10px 0;
-    gap: 10px;
-}
-
-#rigen {
-    font-size: 16px;
-    width: 50%;
-}
-
-input[type="file"]{
-    display: none;
-}
-
-.file-label {
-    @include flex;
-    padding: 10px;
-    width: fit-content;
-    height: 40px;
-    border: 1px solid gray;
-    
-}
-
-.file-label:hover {
-    border: 1px solid $white;
-    box-shadow: 0 0 1em $black;
-}
-
-.container {
-    justify-content: center;
-}
-
-input[type="submit"]{
-    border: none;
-    outline: none;
-    background-color: $black;
-    color: $white;
-    font-size: 20px;
-    border-radius: 1em;
-    padding: 10px;
-}
-input[type="submit"]:hover {
-    box-shadow: 0 0 1em $black;
-    background-color: $green;
-    color: $black;
-}

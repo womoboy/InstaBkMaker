@@ -33,7 +33,7 @@
         global $inputsName;
 
         foreach($inputsName as $value){
-            echo validateData($_POST[$value]) . "<br>";
+            echo validateData($_POST[$value]) . ' ' . $value . ' ' . ' اضفه شد !' . "<br>";
         }
     }
 
@@ -46,3 +46,20 @@
         }
     }
 ?>
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Action-InstaBkMaker</title>
+</head>
+<body>
+    <section>
+        <div class="frame" id="frame-1.1">
+            
+        </div>
+    </section>
+</body>
+</html>

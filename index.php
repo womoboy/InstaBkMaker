@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ajax sended data</title>
-    <link rel="stylesheet" href="style/general.css">
+    <title>Form-InstaBkMaker</title>
+    <link rel="stylesheet" href="style/index.css">
 </head>
 <body>
     <form action="<?php echo htmlspecialchars('action.php');?>" method="post">
