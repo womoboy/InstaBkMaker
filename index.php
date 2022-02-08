@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style/general.css">
 </head>
 <body>
-    <form action="action.php" method="post">
+    <form action="<?php echo htmlspecialchars('action.php');?>" method="post">
         <div>
             <label for="code">کد :</label>
             <input id="code" type="number" name="code">
@@ -34,13 +34,14 @@
             <input id="epic-gun" type="number" name="epicGun">
         </div>
         <div>
-            <label for="price">قیمت :</label>
+            <label for="price">قیمت(تومان) :</label>
             <input id="price" type="number" name="price">
         </div>
-        <div>
-            <input id="video" type="file" name="video">
+        <div class="container">
+            <label for="video" class="file-label">ویدیو را وارد کنید</label>
+            <input id="video" type="file" name="video" accept="video/*">
         </div>
-        <div>
+        <div class="container">
             <input id="submit" type="submit" name="submit" value="ارسال">
         </div>
     </form>
