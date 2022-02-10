@@ -1,0 +1,106 @@
+@import 'reset.scss', 'general.scss';
+
+body {
+    @include flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+section {
+    @include flex;
+    flex-direction: column;
+}
+
+.form-frame {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    column-gap: 10px;
+    row-gap: 10px;
+    background-color: $gray;
+    padding: 10px;
+    height: fit-content;
+    color: $white;
+}
+
+.form-frame div:not([class="solo"]){
+    @include flex;
+    justify-content: space-between;
+    border: 1px solid $white;
+    padding: 0 10px;
+}
+
+.insta-frame {
+    @include flex;
+    flex-direction: column;
+    outline: 1px solid $red;
+    width: calc(1080px / 2);
+    height: calc(1080px / 2);
+    position: relative;
+}
+
+.insta-frame header, .insta-frame footer {
+    @include flex;
+    width: 100%;
+    height: 25%;
+    color: $white;
+    position: absolute;
+    background-color: $black;
+}
+
+.insta-frame header {
+    top: 0;
+    right: 0;
+}
+
+.insta-frame footer {
+    bottom: 0;
+    right: 0;
+}
+
+#video-frame {
+    width: 100%;
+    height: 50%;
+}
+
+#video{
+    display: none;
+}
+
+#method {
+    display: none;
+}
+
+.solo {
+    @include flex;
+    text-align: center;
+}
+
+#video-label {
+    background-color: $whiteSmoke;
+    padding: 2px 10px;
+    color: $black;
+    cursor: pointer;
+}
+
+#video-label:hover {
+    color: $green;
+    box-shadow: 0 0 1em $green;
+}
+
+#start {
+    background-color: $black;
+    color: $white;
+    border: none;
+    outline: none;
+    border-radius: 1em;
+    padding: 2px 50px;
+    font-size: 15px;
+    border: 1px solid transparent;
+}
+
+#start:hover{
+    background-color: $orange;
+    box-shadow: 0 0 1em $white;
+    border: 1px solid $white;
+}

@@ -15,79 +15,125 @@ body {
   src: url("../asset/fonts/Vazir-Regular-FD.eot?#iefix") format("embedded-opentype"), url("../asset/fonts/Vazir-Regular-FD.woff2") format("woff2"), url("../asset/fonts/Vazir-Regular-FD.woff") format("woff"), url("../asset/fonts/Vazir-Regular-FD.ttf") format("truetype"), url("../asset/fonts/Vazir-Regular-FD.svg") format("svg");
   /* Legacy iOS */
 }
+.container {
+  width: 1280px;
+}
+
 body {
   display: flex;
   justify-content: center;
   place-items: center;
   flex-direction: column;
-  background: linear-gradient(70deg, black, teal);
-  min-height: 100vh;
+  gap: 10px;
 }
 
-form {
+section {
   display: flex;
   justify-content: center;
   place-items: center;
   flex-direction: column;
-  background-color: whitesmoke;
-  padding: 1em;
-  border-radius: 1em;
-  box-shadow: 0 0 1em black;
 }
 
-form > div {
+.form-frame {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  column-gap: 10px;
+  row-gap: 10px;
+  background-color: gray;
+  padding: 10px;
+  height: fit-content;
+  color: white;
+}
+
+.form-frame div:not([class=solo]) {
   display: flex;
   justify-content: center;
   place-items: center;
   justify-content: space-between;
-  width: 100%;
-  height: fit-content;
-  margin: 10px 0;
-  gap: 10px;
+  border: 1px solid white;
+  padding: 0 10px;
 }
 
-#rigen {
-  font-size: 16px;
-  width: 50%;
-}
-
-input[type=file] {
-  display: none;
-}
-
-.file-label {
+.insta-frame {
   display: flex;
   justify-content: center;
   place-items: center;
-  padding: 10px;
-  width: fit-content;
-  height: 40px;
-  border: 1px solid gray;
+  flex-direction: column;
+  outline: 1px solid red;
+  width: 540px;
+  height: 540px;
+  position: relative;
 }
 
-.file-label:hover {
-  border: 1px solid white;
-  box-shadow: 0 0 1em black;
-}
-
-.container {
+.insta-frame header, .insta-frame footer {
+  display: flex;
   justify-content: center;
+  place-items: center;
+  width: 100%;
+  height: 25%;
+  color: white;
+  position: absolute;
+  background-color: black;
 }
 
-input[type=submit] {
-  border: none;
-  outline: none;
+.insta-frame header {
+  top: 0;
+  right: 0;
+}
+
+.insta-frame footer {
+  bottom: 0;
+  right: 0;
+}
+
+#video-frame {
+  width: 100%;
+  height: 50%;
+}
+
+#video {
+  display: none;
+}
+
+#method {
+  display: none;
+}
+
+.solo {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  text-align: center;
+}
+
+#video-label {
+  background-color: whitesmoke;
+  padding: 2px 10px;
+  color: black;
+  cursor: pointer;
+}
+
+#video-label:hover {
+  color: #6bdf6b;
+  box-shadow: 0 0 1em #6bdf6b;
+}
+
+#start {
   background-color: black;
   color: white;
-  font-size: 20px;
+  border: none;
+  outline: none;
   border-radius: 1em;
-  padding: 10px;
+  padding: 2px 50px;
+  font-size: 15px;
+  border: 1px solid transparent;
 }
 
-input[type=submit]:hover {
-  box-shadow: 0 0 1em black;
-  background-color: #6bdf6b;
-  color: black;
+#start:hover {
+  background-color: orange;
+  box-shadow: 0 0 1em white;
+  border: 1px solid white;
 }
 
 /*# sourceMappingURL=index.css.map */
