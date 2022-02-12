@@ -3,6 +3,16 @@ var input_video = document.getElementById('video');
 var video_frame = document.getElementById('video-frame');
 var start = document.getElementById('start');
 var file_reader = new FileReader();
+var method = document.getElementById('method-list');
+var header = document.getElementById('header');
+var footer = document.getElementById('footer');
+var no_method_txt = 'بدون افکت !';
+
+//action when onload page
+document.addEventListener("DOMContentLoaded", function(){
+    header.innerText = no_method_txt;
+    footer.innerText = no_method_txt;
+});
 
 
 // function
@@ -19,13 +29,22 @@ function action(){
 }
 
 function goMethod(){
-    var method = document.getElementById('method-list');
-    if(method.value == 'method-1'){
-        console.log("the method 1 is ready !");
+    if(method.value == 'method-none'){
+        header.innerText = no_method_txt;
+        footer.innerText = no_method_txt;
     }
+    if(method.value == 'method-1'){
+        method_01();
+    }
+}
+
+// the methods here
+function method_01(){
+    header.innerText = 'متد شماره ی یک';
+    footer.innerText = 'متد شماره ی یک';
 }
 
 //animations 
 function animation_method_01(){
-
+    
 }

@@ -61,9 +61,13 @@
 
     <section>
         <div class="container insta-frame">
-            <header>this is the header</header>
+            <header id="header">
+                
+            </header>
             <video id="video-frame"></video>
-            <footer>this is the footer</footer>
+            <footer id="footer">
+                
+            </footer>
         </div>
     </section>
 
