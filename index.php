@@ -21,8 +21,7 @@
                 <input type="number" id="battle-pass" name="battle-pass">
             </div>
             <div>
-                <label for="rigen">ریجن :</label>
-                <input for="rigen" id="rigen" type="list" hidden>
+                <label for="rigen-list">ریجن :</label>
                 <select id="rigen-list">
                     <option value="ایران">ایران</option>
                     <option value="هند">هند</option>
@@ -43,8 +42,8 @@
             </div>
             <div>
                 <label for="method">افکت :</label>
-                <input for="method-list" type="list" id="method" name="method">
-                <select id="mehod-list">
+                <select id="method-list" onchange="goMethod()">
+                    <option value="method-none">بدون متد</option>
                     <option value="method-1">متد-1</option>
                     <option value="method-2">متد-2</option>
                     <option value="method-3">متد-3</option>
@@ -52,10 +51,10 @@
             </div>
             <div class="solo">
                 <label id="video-label" for="video">ویدیو را انتخاب کنید</label>
-                <input type="file" id="video" accept="video/*">
+                <input type="file" id="video" accept="video/*" onchange="upload();">
             </div>
             <div class="solo">
-                <button id="start">Start</button>
+                <button id="start" onclick="action();">اجرا</button>
             </div>
         </div> 
     </section>
@@ -68,6 +67,11 @@
         </div>
     </section>
 
-    <script src=""></script>
+    <section>
+        <div class="log-box"></div>
+    </section>
+
+    <script src="asset/js/jquery-3.6.0.min.js"></script>
+    <script src="asset/js/cus-script.js"></script>
 </body>
 </html>
