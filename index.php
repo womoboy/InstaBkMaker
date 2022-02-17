@@ -7,7 +7,9 @@
     <title>InstaBkMaker</title>
 
     <link rel="stylesheet" href="asset/style/index.css">
-
+    
+    <!--add Method styels-->
+    <link rel="stylesheet" id="method-style">
 </head>
 <body>
     <section>
@@ -54,7 +56,7 @@
                 <input type="file" id="video" accept="video/*" onchange="upload();">
             </div>
             <div class="solo">
-                <button id="start" onclick="action();">اجرا</button>
+                <button id="start-btn" onclick="action();">اجرا</button>
             </div>
         </div> 
     </section>
@@ -62,7 +64,7 @@
     <section>
         <div class="container insta-frame">
             <header id="header">
-                
+
             </header>
             <video id="video-frame"></video>
             <footer id="footer">

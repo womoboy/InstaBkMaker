@@ -46,6 +46,7 @@ section {
     color: $white;
     position: absolute;
     background-color: $black;
+    overflow: hidden;
 }
 
 .insta-frame header {
@@ -84,7 +85,7 @@ section {
     box-shadow: 0 0 1em $green;
 }
 
-#start {
+#start-btn {
     background-color: $black;
     color: $white;
     border: none;
@@ -95,7 +96,7 @@ section {
     border: 1px solid transparent;
 }
 
-#start:hover{
+#start-btn:hover{
     background-color: $orange;
     box-shadow: 0 0 1em $white;
     border: 1px solid $white;
