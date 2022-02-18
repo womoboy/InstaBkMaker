@@ -35,7 +35,7 @@
                 <input type="number" id="epic-gun">
             </div>
             <div>
-                <label for="legend-gun">کان لجند :</label>
+                <label for="legend-gun">گان لجند :</label>
                 <input type="number" id="legend-gun">
             </div>
             <div>
