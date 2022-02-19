@@ -1,0 +1,49 @@
+.logo-frame {
+    height: 70%;
+}
+
+#logo-image {
+    width: 100%;
+    height: 100%;
+}
+
+#header, #footer {
+    position: relative;
+}
+
+#code-frame, #rigen-frame, #legendGun-frame, #epicGun-frame, #battlePass-frame, #price-frame {
+    position: absolute;
+}
+
+#code-frame {
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#rigen-frame {
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#legendGun-frame {
+    right: 15px;
+    top: 5px; 
+}
+
+#epicGun-frame {
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#battlePass-frame {
+    right: 15px;
+    bottom: 5px;
+}
+
+#price-frame {
+    left: 15px;
+    bottom: 25%;
+}
