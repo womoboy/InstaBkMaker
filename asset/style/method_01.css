@@ -6,7 +6,8 @@ p {
 }
 
 .logo-frame {
-    height: 70%;
+    height: 94.5px;
+    width: 94.5px;
     overflow: hidden;
 }
 
@@ -59,9 +60,14 @@ p {
 }
 
 #price-frame {
+    width: 200px;
     left: 15px;
     top: 50%;
     transform: translateY(-80%);
+}
+
+#price-text {
+    font-size: 16px;
 }
 
 #vfx-frame {
