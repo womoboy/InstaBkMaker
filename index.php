@@ -7,9 +7,10 @@
     <title>InstaBkMaker</title>
 
     <link rel="stylesheet" href="asset/style/index.css">
-    
+
     <!--add Method styels-->
     <link rel="stylesheet" id="method-style">
+    
 </head>
 <body>
     <section>
@@ -62,7 +63,7 @@
     </section>
 
     <section>
-        <div class="container insta-frame">
+        <div class="container insta-frame" id="insta-frame">
             <header id="header">
 
             </header>

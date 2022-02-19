@@ -19,6 +19,7 @@ var start_btn = document.getElementById('start-btn');
 var header = document.getElementById('header');
 var footer = document.getElementById('footer');
 
+
 var no_method_txt = 'بدون افکت !';
 
 //action when onload page
@@ -48,34 +49,48 @@ function startInformation(){
 }
 
 function goMethod(){
+
+    //specical arrays for method
     var method_style = [
         "asset/style/method_01.css",
         "asset/style/method_02.css",
         "asset/style/method_03.css"
     ];
+    
+    var vfx_video = [
+        "asset/library/vfx_01.mp4",
+        "asset/library/vfx_02.mp4",
+        "asset/library/vfx_03.mp4"
+    ];
 
     if(method.value == 'method-none'){
+        cleanContent();
         header.innerText = no_method_txt;
         footer.innerText = no_method_txt;
     }else if(method.value == 'method-1'){
         cleanContent();
-        let method = new CreateMethod(logo_source, code.value, battlePass.value, rigen.value, epicGun.value, legendGun.value, price.value, method_style[0]);
+        let method = new CreateMethod(logo_source, code.value, battlePass.value, rigen.value, epicGun.value, legendGun.value, price.value, method_style[0], vfx_video[0]);
     }else if(method.value == 'method-2') {
         cleanContent();
-        let method = new CreateMethod(logo_source, code.value, battlePass.value, rigen.value, epicGun.value, legendGun.value, price.value, method_style[1]);
+        let method = new CreateMethod(logo_source, code.value, battlePass.value, rigen.value, epicGun.value, legendGun.value, price.value, method_style[1], vfx_video[1]);
     }else if(method.value == 'method-3') {
         cleanContent();
-        let method = new CreateMethod(logo_source, code.value, battlePass.value ,rigen.value, epicGun.value, legendGun.value, price.value, method_style[2]);
+        let method = new CreateMethod(logo_source, code.value, battlePass.value ,rigen.value, epicGun.value, legendGun.value, price.value, method_style[2], vfx_video[2]);
     }
 }
 
 function cleanContent(){
+    var vfx_frame = document.getElementById("vfx-frame");
     header.innerHTML = "";
     footer.innerHTML = "";
+    if(typeof(vfx_frame) != "undefined" && vfx_frame != null) {
+        vfx_frame.remove();
+    }
+    
 }
 //classes
 class CreateMethod{
-    constructor($logo, $code, $battlePass, $rigen, $epicGun, $legendGun, $price, $style){
+    constructor($logo, $code, $battlePass, $rigen, $epicGun, $legendGun, $price, $style, $vfx){
         //create logo
         this.logo = $logo;
         this.code = $code;
@@ -85,10 +100,12 @@ class CreateMethod{
         this.legendGun = $legendGun;
         this.price = $price;
         this.style = $style;
+        this.vfx = $vfx;
 
         //select header element
         var header = document.getElementById('header');
         var footer = document.getElementById('footer');
+        var insta_frame = document.getElementById("insta-frame");
 
         //create logo element
         //__logo frame
@@ -206,16 +223,34 @@ class CreateMethod{
 
         price_frame_creator.appendChild(price_text_creator);
 
+        //create vfx element
+        //__vfx frame
+        var vfx_frame_creator = document.createElement("div");
+        vfx_frame_creator.setAttribute("id", "vfx-frame");
+
+        //__vfx video
+        var vfx_video_creator = document.createElement("video");
+        vfx_video_creator.setAttribute("id", "vfx-video");
+        vfx_video_creator.setAttribute("loop", "loop");
+        vfx_video_creator.setAttribute("autoplay", "autoplay");
+        vfx_video_creator.src = this.vfx;
+
+        vfx_frame_creator.appendChild(vfx_video_creator);
+
         //append to header
         header.appendChild(logo_frame_creator);
         header.appendChild(code_frame_creator);
         header.appendChild(rigen_frame_creator);
 
         //append to footer
+        footer.appendChild(vfx_frame_creator);
         footer.appendChild(legendGun_frame_creator);
         footer.appendChild(epicGun_frame_creator);
         footer.appendChild(battlePass_frame_creator);
         footer.appendChild(price_frame_creator);
+
+        //append to insta frame vfx video
+        insta_frame.appendChild(vfx_frame_creator);
         
         //add style method
         var style_element = document.getElementById("method-style");
