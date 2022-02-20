@@ -74,18 +74,19 @@ section {
   height: 25%;
   color: black;
   position: absolute;
-  overflow: hidden;
   z-index: 1;
 }
 
 .insta-frame header {
   top: 0;
   right: 0;
+  z-index: 2;
 }
 
 .insta-frame footer {
   bottom: 0;
   right: 0;
+  z-index: 2;
 }
 
 #video-frame {

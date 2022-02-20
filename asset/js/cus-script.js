@@ -63,19 +63,31 @@ function goMethod(){
         "asset/library/vfx_03.mp4"
     ];
 
+    var topBorder_source = [
+        "asset/library/border/topBorder_method_01.svg",
+        "asset/library/border/topBorder_method_02.png",
+        "asset/library/border/topBorder_method_03.png"
+    ];
+
+    var bottomBorder_source = [
+        "asset/library/border/bottomBorder_method_01.svg",
+        "asset/library/border/bottomBorder_mehtod_02.png",
+        "asset/library/border/bottomBorder_method_03.png"
+    ];
+
     if(method.value == 'method-none'){
         cleanContent();
         header.innerText = no_method_txt;
         footer.innerText = no_method_txt;
     }else if(method.value == 'method-1'){
         cleanContent();
-        let method = new CreateMethod(logo_source, code.value, battlePass.value, rigen.value, epicGun.value, legendGun.value, price.value, method_style[0], vfx_video[0]);
+        let method = new CreateMethod(logo_source, code.value, battlePass.value, rigen.value, epicGun.value, legendGun.value, price.value, method_style[0], vfx_video[0], topBorder_source[0], bottomBorder_source[0]);
     }else if(method.value == 'method-2') {
         cleanContent();
-        let method = new CreateMethod(logo_source, code.value, battlePass.value, rigen.value, epicGun.value, legendGun.value, price.value, method_style[1], vfx_video[1]);
+        let method = new CreateMethod(logo_source, code.value, battlePass.value, rigen.value, epicGun.value, legendGun.value, price.value, method_style[1], vfx_video[1], topBorder_source[1], bottomBorder_source[1]);
     }else if(method.value == 'method-3') {
         cleanContent();
-        let method = new CreateMethod(logo_source, code.value, battlePass.value ,rigen.value, epicGun.value, legendGun.value, price.value, method_style[2], vfx_video[2]);
+        let method = new CreateMethod(logo_source, code.value, battlePass.value ,rigen.value, epicGun.value, legendGun.value, price.value, method_style[2], vfx_video[2], topBorder_source[2], bottomBorder_source[2]);
     }
 }
 
@@ -90,7 +102,7 @@ function cleanContent(){
 }
 //classes
 class CreateMethod{
-    constructor($logo, $code, $battlePass, $rigen, $epicGun, $legendGun, $price, $style, $vfx){
+    constructor($logo, $code, $battlePass, $rigen, $epicGun, $legendGun, $price, $style, $vfx, $topBorder, $bottomBorder){
         //create logo
         this.logo = $logo;
         this.code = $code;
@@ -101,6 +113,8 @@ class CreateMethod{
         this.price = $price;
         this.style = $style;
         this.vfx = $vfx;
+        this.topBorder = $topBorder;
+        this.bottomBorder = $bottomBorder;
 
         //select header element
         var header = document.getElementById('header');
@@ -237,10 +251,35 @@ class CreateMethod{
 
         vfx_frame_creator.appendChild(vfx_video_creator);
 
+        //create top border
+        //__topBorder frame
+        var topBorder_frame_creator = document.createElement("div");
+        topBorder_frame_creator.setAttribute("id", "top-border-frame");
+
+        //__toBorder image
+        var topBorder_image_creator = document.createElement("img");
+        topBorder_image_creator.setAttribute("id", "top-border-image");
+        topBorder_image_creator.setAttribute("src", this.topBorder);
+
+        topBorder_frame_creator.appendChild(topBorder_image_creator);
+
+        //create bottom border
+        //__bottomBorder frame
+        var bottomBorder_frame_creator = document.createElement("div");
+        bottomBorder_frame_creator.setAttribute("id", "bottom-border-frame");
+
+        //__bottomBorder image
+        var bottomBorder_image_creator = document.createElement("img");
+        bottomBorder_image_creator.setAttribute("id", "bottom-border-image");
+        bottomBorder_image_creator.setAttribute("src", this.bottomBorder);
+
+        bottomBorder_frame_creator.appendChild(bottomBorder_image_creator);
+
         //append to header
         header.appendChild(logo_frame_creator);
         header.appendChild(code_frame_creator);
         header.appendChild(rigen_frame_creator);
+        header.appendChild(topBorder_frame_creator);
 
         //append to footer
         footer.appendChild(vfx_frame_creator);
@@ -248,6 +287,7 @@ class CreateMethod{
         footer.appendChild(epicGun_frame_creator);
         footer.appendChild(battlePass_frame_creator);
         footer.appendChild(price_frame_creator);
+        footer.appendChild(bottomBorder_frame_creator);
 
         //append to insta frame vfx video
         insta_frame.appendChild(vfx_frame_creator);
