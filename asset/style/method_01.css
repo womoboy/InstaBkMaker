@@ -21,7 +21,7 @@ p {
     position: relative;
 }
 
-#code-frame, #rigen-frame, #legendGun-frame, #epicGun-frame, #battlePass-frame, #price-frame {
+.code-frame, .rigen-frame, .legendGun-frame, .epicGun-frame, .battlePass-frame, .price-frame {
     position: absolute;
     background: linear-gradient(130deg, rgb(33, 33, 121), black);
     color: white;
@@ -34,41 +34,42 @@ p {
     z-index: 0;
     border-radius: 1em;
     box-shadow: 0 0 1em black;
+    transition: all 0.5s;
+    opacity: 0.1;
 }
 
-#code-frame {
-    right: 15px;
+.code-frame {
+    right: -200px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.5s;
+}
+
+.rigen-frame {
+    left: -200px;
     top: 50%;
     transform: translateY(-50%);
 }
 
-#rigen-frame {
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-#legendGun-frame {
-    right: 15px;
+.legendGun-frame {
+    right: -200px;
     bottom: 15px;
 }
 
-#epicGun-frame {
+.epicGun-frame {
     right: 50%;
     transform: translateX(50%);
+    bottom: -100px;
+}
+
+.battlePass-frame {
+    left: -200px;
     bottom: 15px;
 }
 
-#battlePass-frame {
-    left: 15px;
-    bottom: 15px;
-}
-
-#price-frame {
+.price-frame {
     width: 200px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -80%);
+    bottom: -100px;
 }
 
 #price-text {
@@ -110,3 +111,100 @@ p {
     width: 106%;
 }
 
+/*inputs animation class*/
+.go-position-code-frame {
+    animation: codeFrameGo 2s ease;
+}
+
+.go-position-rigen-frame {
+    animation: rigenFrameGo 2s ease;
+}
+
+.go-position-legendGun-frame {
+    animation: legendGunFrameGo 2s ease;
+}
+
+.go-position-epicGun-frame {
+    animation: epicGunFrameGo 2s ease;
+}
+
+.go-position-battlePass-frame {
+    animation: battlePassFrameGo 2s ease;
+}
+
+.go-position-price-frame {
+    animation: priceFrameGo 2s ease;
+}
+
+/*animations*/
+@keyframes codeFrameGo {
+    0% {
+        right: -200px;
+        opacity: 0.1;
+    }
+
+    100% {
+        right: 15px;
+        opacity: 1;
+    }
+}
+
+@keyframes rigenFrameGo {
+    0% {
+        left: -200px;
+        opacity: 0.1;
+    }
+
+    100% {
+        left: 15px;
+        opacity: 1;
+    }
+}
+
+@keyframes legendGunFrameGo {
+    0% {
+        right: -200px;
+        opacity: 0.1;
+    }
+
+    100% {
+        right: 15px;
+        opacity: 1;
+    }
+}
+
+@keyframes epicGunFrameGo {
+    0% {
+        bottom: -100px;
+        opacity: 0.1;
+    }
+
+    100% {
+        bottom: 15px;
+        opacity: 1;
+    }
+}
+
+@keyframes battlePassFrameGo {
+    0% {
+        left: -200px;
+        opacity: 0.1;
+    }
+
+    100% {
+        left: 15px;
+        opacity: 1;
+    }
+}
+
+@keyframes priceFrameGo {
+    0% {
+        bottom: -100px;
+        opacity: 0.1;
+    }
+
+    100% {
+        bottom: 60px;
+        opacity: 1;
+    }
+}

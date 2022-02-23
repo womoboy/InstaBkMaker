@@ -64,6 +64,7 @@ section {
   width: 540px;
   height: 540px;
   position: relative;
+  overflow: hidden;
 }
 
 .insta-frame header, .insta-frame footer {

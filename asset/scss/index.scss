@@ -37,6 +37,7 @@ section {
     width: calc(1080px / 2);
     height: calc(1080px / 2);
     position: relative;
+    overflow: hidden;
 }
 
 .insta-frame header, .insta-frame footer {

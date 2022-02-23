@@ -46,10 +46,10 @@ function action(){
 function startInformation(){
     goMethod();
     video_frame.play();
+    inputAnimation();
 }
 
 function goMethod(){
-
     //specical arrays for method
     var method_style = [
         "asset/style/method_01.css",
@@ -97,9 +97,94 @@ function cleanContent(){
     footer.innerHTML = "";
     if(typeof(vfx_frame) != "undefined" && vfx_frame != null) {
         vfx_frame.remove();
-    }
-    
+    } 
 }
+
+function inputAnimation() {
+    //select frame
+    var code_frame = document.getElementById("code-frame");
+    var rigen_frame = document.getElementById("rigen-frame");
+    var legendGun_frame = document.getElementById("legendGun-frame");
+    var epicGun_frame = document.getElementById("epicGun-frame");
+    var battlePass_frame = document.getElementById("battlePass-frame");
+    var price_frame = document.getElementById("price-frame");
+
+    if(method.value == 'method-1') {
+        var counter = 0;
+        var maxTime = 10;
+        setInterval(() => {
+            if(counter < maxTime){
+                counter = counter + 1;
+
+                //code frame animation
+                if(counter == 2) {
+                    code_frame.classList.add("go-position-code-frame");
+                    code_frame.style.right = "15px";
+                    if(code_frame.style.right == "15px"){
+                        code_frame.style.opacity = "1";
+                    }
+                }
+
+                //rigen frame animation
+                if(counter == 3) {
+                    rigen_frame.classList.add("go-position-rigen-frame");
+                    rigen_frame.style.left = "15px";
+                    if(rigen_frame.style.left = "15px"){
+                        rigen_frame.style.opacity = "1";
+                    }
+                }
+                
+                //legendGun frame animation
+                if(counter == 4) {
+                    legendGun_frame.classList.add("go-position-legendGun-frame");
+                    legendGun_frame.style.right = "15px";
+                    if(legendGun_frame.style.right == "15px"){
+                        legendGun_frame.style.opacity = "1";
+                    }
+                }
+
+                //epicGun frame animation
+                if(counter == 5) {
+                    epicGun_frame.classList.add("go-position-epicGun-frame");
+                    epicGun_frame.style.bottom = "15px";
+                    if(epicGun_frame.style.bottom = "15px"){
+                        epicGun_frame.style.opacity = "1";
+                    }
+                }
+
+                //battlePass frame animation
+                if(counter == 6) {
+                    battlePass_frame.classList.add("go-position-battlePass-frame");
+                    battlePass_frame.style.left = "15px";
+                    if(battlePass_frame.style.left == "15px"){
+                        battlePass_frame.style.opacity = "1";
+                    }
+                }
+
+                //price frame animation
+                if(counter == 7) {
+                    price_frame.classList.add("go-position-price-frame");
+                    price_frame.style.bottom = "60px";
+                    if(price_frame.style.bottom == "60px"){
+                        price_frame.style.opacity = "1";
+                    }
+                }
+
+            } else {
+                clearInterval();
+            }
+        }, 1000);
+    }
+
+    if(method.value == 'method-2') {
+
+    }
+
+    if(method.value == 'method-3') {
+
+    }
+}
+
 //classes
 class CreateMethod{
     constructor($logo, $code, $battlePass, $rigen, $epicGun, $legendGun, $price, $style, $vfx, $topBorder, $bottomBorder){
@@ -137,6 +222,7 @@ class CreateMethod{
         //__code frame
         var code_frame_creator = document.createElement("div");
         code_frame_creator.setAttribute("id", "code-frame");
+        code_frame_creator.className = "code-frame";
 
         //__code text
         var code_text_creator = document.createElement("p");
@@ -155,6 +241,7 @@ class CreateMethod{
         //__battleFrame frame
         var battlePass_frame_creator = document.createElement("div");
         battlePass_frame_creator.setAttribute("id", "battlePass-frame");
+        battlePass_frame_creator.className = "battlePass-frame";
 
         //__battlePass text
         var battlePass_text_creator = document.createElement("p");
@@ -173,6 +260,7 @@ class CreateMethod{
         //__rigen frame
         var rigen_frame_creator = document.createElement("div");
         rigen_frame_creator.setAttribute("id", "rigen-frame");
+        rigen_frame_creator.className = "rigen-frame";
 
         //rigen text
         var rigen_text_creator = document.createElement("p");
@@ -190,6 +278,7 @@ class CreateMethod{
         //__epicGun frame
         var epicGun_frame_creator = document.createElement("div");
         epicGun_frame_creator.setAttribute("id", "epicGun-frame");
+        epicGun_frame_creator.className = "epicGun-frame";
 
         //__epicGun text
         var epicGun_text_creator = document.createElement("p");
@@ -207,6 +296,7 @@ class CreateMethod{
         //__legendGun frame
         var legendGun_frame_creator = document.createElement("div");
         legendGun_frame_creator.setAttribute("id", "legendGun-frame");
+        legendGun_frame_creator.className = "legendGun-frame";
 
         //__legendGun text
         var legendGun_text_creator = document.createElement("p");
@@ -224,6 +314,7 @@ class CreateMethod{
         //__price frame
         var price_frame_creator = document.createElement("div");
         price_frame_creator.setAttribute("id", "price-frame");
+        price_frame_creator.className = "price-frame";
 
         //__price text
         var price_text_creator = document.createElement("p");
