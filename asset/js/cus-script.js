@@ -1,5 +1,5 @@
 //global variable
-var logo_source = "asset/library/Logo_DornaGame.jpg";
+var logo_source = "asset/library/Logo_BaranGem.jpeg";
 
 
 //inputs
@@ -112,68 +112,68 @@ function inputAnimation() {
     if(method.value == 'method-1') {
         var counter = 0;
         var maxTime = 10;
-        setInterval(() => {
-            if(counter < maxTime){
-                counter = counter + 1;
+        // setInterval(() => {
+        //     if(counter < maxTime){
+        //         counter = counter + 1;
 
-                //code frame animation
-                if(counter == 2) {
-                    code_frame.classList.add("go-position-code-frame");
-                    code_frame.style.right = "15px";
-                    if(code_frame.style.right == "15px"){
-                        code_frame.style.opacity = "1";
-                    }
-                }
+        //         //code frame animation
+        //         if(counter == 2) {
+        //             code_frame.classList.add("go-position-code-frame");
+        //             code_frame.style.right = "15px";
+        //             if(code_frame.style.right == "15px"){
+        //                 code_frame.style.opacity = "1";
+        //             }
+        //         }
 
-                //rigen frame animation
-                if(counter == 3) {
-                    rigen_frame.classList.add("go-position-rigen-frame");
-                    rigen_frame.style.left = "15px";
-                    if(rigen_frame.style.left = "15px"){
-                        rigen_frame.style.opacity = "1";
-                    }
-                }
+        //         //rigen frame animation
+        //         if(counter == 3) {
+        //             rigen_frame.classList.add("go-position-rigen-frame");
+        //             rigen_frame.style.left = "15px";
+        //             if(rigen_frame.style.left = "15px"){
+        //                 rigen_frame.style.opacity = "1";
+        //             }
+        //         }
                 
-                //legendGun frame animation
-                if(counter == 4) {
-                    legendGun_frame.classList.add("go-position-legendGun-frame");
-                    legendGun_frame.style.right = "15px";
-                    if(legendGun_frame.style.right == "15px"){
-                        legendGun_frame.style.opacity = "1";
-                    }
-                }
+        //         //legendGun frame animation
+        //         if(counter == 4) {
+        //             legendGun_frame.classList.add("go-position-legendGun-frame");
+        //             legendGun_frame.style.right = "15px";
+        //             if(legendGun_frame.style.right == "15px"){
+        //                 legendGun_frame.style.opacity = "1";
+        //             }
+        //         }
 
-                //epicGun frame animation
-                if(counter == 5) {
-                    epicGun_frame.classList.add("go-position-epicGun-frame");
-                    epicGun_frame.style.bottom = "15px";
-                    if(epicGun_frame.style.bottom = "15px"){
-                        epicGun_frame.style.opacity = "1";
-                    }
-                }
+        //         //epicGun frame animation
+        //         if(counter == 5) {
+        //             epicGun_frame.classList.add("go-position-epicGun-frame");
+        //             epicGun_frame.style.bottom = "15px";
+        //             if(epicGun_frame.style.bottom = "15px"){
+        //                 epicGun_frame.style.opacity = "1";
+        //             }
+        //         }
 
-                //battlePass frame animation
-                if(counter == 6) {
-                    battlePass_frame.classList.add("go-position-battlePass-frame");
-                    battlePass_frame.style.left = "15px";
-                    if(battlePass_frame.style.left == "15px"){
-                        battlePass_frame.style.opacity = "1";
-                    }
-                }
+        //         //battlePass frame animation
+        //         if(counter == 6) {
+        //             battlePass_frame.classList.add("go-position-battlePass-frame");
+        //             battlePass_frame.style.left = "15px";
+        //             if(battlePass_frame.style.left == "15px"){
+        //                 battlePass_frame.style.opacity = "1";
+        //             }
+        //         }
 
-                //price frame animation
-                if(counter == 7) {
-                    price_frame.classList.add("go-position-price-frame");
-                    price_frame.style.bottom = "60px";
-                    if(price_frame.style.bottom == "60px"){
-                        price_frame.style.opacity = "1";
-                    }
-                }
+        //         //price frame animation
+        //         if(counter == 7) {
+        //             price_frame.classList.add("go-position-price-frame");
+        //             price_frame.style.bottom = "60px";
+        //             if(price_frame.style.bottom == "60px"){
+        //                 price_frame.style.opacity = "1";
+        //             }
+        //         }
 
-            } else {
-                clearInterval();
-            }
-        }, 1000);
+        //     } else {
+        //         clearInterval();
+        //     }
+        // }, 1000);
     }
 
     if(method.value == 'method-2') {
