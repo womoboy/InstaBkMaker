@@ -81,7 +81,7 @@ function goMethod(){
         footer.innerText = no_method_txt;
     }else if(method.value == 'method-1'){
         cleanContent();
-        let method = new CreateMethod(logo_source, code.value, battlePass.value, rigen.value, epicGun.value, legendGun.value, price.value, method_style[0], vfx_video[0], topBorder_source[0], bottomBorder_source[0]);
+        let method = new CreateMethod(logo_source, code.value, battlePass.value, rigen.value, epicGun.value, legendGun.value, price.value, method_style[0], vfx_video[1], topBorder_source[0], bottomBorder_source[0]);
     }else if(method.value == 'method-2') {
         cleanContent();
         let method = new CreateMethod(logo_source, code.value, battlePass.value, rigen.value, epicGun.value, legendGun.value, price.value, method_style[1], vfx_video[1], topBorder_source[1], bottomBorder_source[1]);
