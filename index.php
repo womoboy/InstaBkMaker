@@ -17,11 +17,11 @@
         <div class="container form-frame">
             <div>
                 <label for="code">کد :</label>
-                <input type="number" id="code" name="code">
+                <input type="text" id="code" name="code">
             </div>
             <div>
                 <label for="battle-pass">بتل پس :</label>
-                <input type="number" id="battle-pass" name="battle-pass">
+                <input type="text" id="battle-pass" name="battle-pass">
             </div>
             <div>
                 <label for="rigen-list">ریجن :</label>
@@ -33,15 +33,15 @@
             </div>
             <div>
                 <label for="epic-gun">گان اپیک :</label>
-                <input type="number" id="epic-gun">
+                <input type="text" id="epic-gun">
             </div>
             <div>
                 <label for="legend-gun">گان لجند :</label>
-                <input type="number" id="legend-gun">
+                <input type="text" id="legend-gun">
             </div>
             <div>
                 <label for="price">قیمت :</label>
-                <input type="number" id="price">
+                <input type="text" id="price">
             </div>
             <div>
                 <label for="method">افکت :</label>
